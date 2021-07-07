@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>This is a Non-SPA example of using Vuejs.</p>
+    </div>
+
+    <div id="app">
+        <section class="row">
+            <div class="col-lg-9">
+                <h3 class="rbc-example-title">
+                    Danger / Error
+                </h3>
+                <rbc-alert title="Oh snap!" type="danger">
+                    Deleting this folder will delete all of its' contents. This cannot
+                    be undone.
+                </rbc-alert>
+                <h3 class="rbc-example-title mt-2">
+                    Warning
+                </h3>
+                <rbc-alert title="Heads up!" type="warning">
+                    You are viewing confidential content. Please handle with care.
+                </rbc-alert>
+                <h3 class="rbc-example-title mt-2">
+                    Success
+                </h3>
+                <rbc-alert title="Well done!" type="success">
+                    Your location has been set. You can change it anytime.
+                </rbc-alert>
+                <h3 class="rbc-example-title mt-2">
+                    Information
+                </h3>
+                <rbc-alert title="Well done!">
+                    Your location has been set. You can change it anytime.
+                </rbc-alert>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" asp-append-version="true"></script>
+<script src="~/js/index.umd.min.js" asp-append-version="true"></script>
+
+<script>
+    const { RbcAlert } = index;
+    var app = new Vue({
+        el: "#app",
+        name: "alert-example",
+        components: { RbcAlert }
+    });
+</script>
